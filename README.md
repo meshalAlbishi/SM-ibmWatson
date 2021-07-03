@@ -1,6 +1,8 @@
 # SM-ibmWatson
 
 it's just a first hands-on experience in IBM Watson Assistant, it has been developed in the Arabic language.
+And it's Only Front-end 🤷‍♂️
+
 
 ## What is the Task?
 The repository will include the following sub tasks:
