@@ -10,6 +10,7 @@ The repository will include the following sub tasks:
 2. Add the chatbot to one of the Robot Control System.
 
 ## Chatbot Commands
+next will show each commands, and it's output
 
 ### Bot (بوت).
 
