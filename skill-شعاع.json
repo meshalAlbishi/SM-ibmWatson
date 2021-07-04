@@ -1,0 +1,1027 @@
+{
+  "name": "شعاع",
+  "type": "dialog",
+  "counts": {
+    "entity": 2,
+    "intent": 4,
+    "actions": 6,
+    "intents": 4,
+    "entities": 2,
+    "global_variables": 0
+  },
+  "status": "Available",
+  "created": "2021-07-02T19:53:51.298Z",
+  "updated": "2021-07-03T08:26:09.000Z",
+  "language": "ar",
+  "skill_id": "d356c20f-309f-4792-9dbd-c795fcbae3d5",
+  "workspace": {
+    "actions": [
+      {
+        "steps": [
+          {
+            "step": "step_209",
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_35960",
+                "parameters": null,
+                "result_variable": "step_209_result_1"
+              }
+            },
+            "variable": "step_209",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_959"
+                },
+                {
+                  "value": "العودة للقائمة الرئيسية",
+                  "from_entity": "action_19502_step_959_entity_8783"
+                }
+              ]
+            }
+          },
+          {
+            "step": "step_281",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "لطلب أحد الخدمات التالية\n- برمجة المواقع\n- برمجة تطبيقات الجوال\n- برمجة تطبيقات الكمبيوتر\nيرجى التواصل مع المطور"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_44797",
+                "parameters": null,
+                "result_variable": "step_281_result_1"
+              }
+            },
+            "variable": "step_281",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_959"
+                },
+                {
+                  "value": "طلب خدمة",
+                  "from_entity": "action_19502_step_959_entity_8783"
+                }
+              ]
+            },
+            "next_step": "step_209"
+          },
+          {
+            "step": "step_352",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "يوجد خدمتين للروبوت حاليا \n1- Robot Arm Fighter \n2- Customer Support Robot\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_959"
+                }
+              ]
+            },
+            "variable": "step_352",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_959"
+                },
+                {
+                  "value": "خدمات الروبوت",
+                  "from_entity": "action_19502_step_959_entity_8783"
+                }
+              ]
+            },
+            "next_step": "step_384"
+          },
+          {
+            "step": "step_384",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "- To learn Java: [Click here](https:// https://www.youtube.com/watch?v=eIrMbAQSU34)\n[](https:// https://www.youtube.com/watch?v=eIrMbAQSU34)- To learn php : [Click here](https://www.youtube.com/watch?v=pWG7ajC_OVo&list=PL4cUxeGkcC9gksOX3Kd9KPo-O68ncT05o)\n- To learn html: [Click here](https://www.youtube.com/watch?v=UB1O30fR-EE&t=1s)\n- To learn CSS: [Click here](https://www.youtube."
+                          },
+                          {
+                            "scalar": "com/watch?v=yfoY53QXEnI&t=2s)[](https://www.youtube.com/watch?v=yfoY53QXEnI&t=2s)\n- To learn Vanilla Js: [Click here](https://www.youtube.com/playlist?list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX)\n- To learn jQuery: [Click here](https://www.youtube.com/playlist?list=PLillGF-RfqbYJVXBgZ_nA7FTAAEpp_IAc)\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_959"
+                }
+              ]
+            },
+            "variable": "step_384",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_959"
+                },
+                {
+                  "value": "خدمات التعليم",
+                  "from_entity": "action_19502_step_959_entity_8783"
+                }
+              ]
+            },
+            "next_step": "step_281"
+          },
+          {
+            "step": "step_959",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "خدماتنا المتوفرة ✨✨"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "خدمات التعليم",
+                      "value": {
+                        "input": {
+                          "text": "خدمات التعليم"
+                        }
+                      }
+                    },
+                    {
+                      "label": "طلب خدمة",
+                      "value": {
+                        "input": {
+                          "text": "طلب خدمة"
+                        }
+                      }
+                    },
+                    {
+                      "label": "خدمات الروبوت",
+                      "value": {
+                        "input": {
+                          "text": "خدمات الروبوت"
+                        }
+                      }
+                    },
+                    {
+                      "label": "العودة للقائمة الرئيسية",
+                      "value": {
+                        "input": {
+                          "text": "العودة للقائمة الرئيسية"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "context": {
+              "variables": []
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "يرجى الاختيار من القائمة المتاحة فقط 😗"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_19502_step_959_entity_8783",
+              "max_tries": 10,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_959",
+            "next_step": "step_352"
+          }
+        ],
+        "title": "خدماتي",
+        "action": "action_19502",
+        "handlers": [],
+        "condition": {
+          "intent": "action_19502_intent_39792"
+        },
+        "variables": [
+          {
+            "variable": "step_154_result_1"
+          },
+          {
+            "variable": "step_156_result_1"
+          },
+          {
+            "title": "No response",
+            "variable": "step_209"
+          },
+          {
+            "variable": "step_209_result_1"
+          },
+          {
+            "variable": "step_264_result_1"
+          },
+          {
+            "title": "لطلب أحد الخدمات التالية - برمجة المواقع - برمجة تطبيقات الجوال ",
+            "variable": "step_281"
+          },
+          {
+            "variable": "step_281_result_1"
+          },
+          {
+            "title": "يوجد خدمتين للروبوت حاليا 1- Robot Arm Fighter 2- Customer Suppo",
+            "variable": "step_352"
+          },
+          {
+            "title": "- To learn Java: [Click here](https:// https://www.youtube.com/w",
+            "variable": "step_384"
+          },
+          {
+            "variable": "step_498_result_1"
+          },
+          {
+            "variable": "step_872_result_1"
+          },
+          {
+            "title": "خدماتنا المتوفرة ✨✨",
+            "variable": "step_959"
+          }
+        ],
+        "next_action": "anything_else",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_615",
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_615"
+          }
+        ],
+        "title": "play",
+        "action": "action_3345",
+        "handlers": [],
+        "condition": {
+          "intent": "action_3345_intent_40199"
+        },
+        "variables": [
+          {
+            "title": "No response",
+            "variable": "step_615"
+          }
+        ],
+        "next_action": "action_19502",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_154",
+            "output": {
+              "generic": []
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_44797",
+                "parameters": null,
+                "result_variable": "step_154_result_1"
+              }
+            },
+            "variable": "step_154",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_827"
+                },
+                {
+                  "value": "المطور",
+                  "from_entity": "action_35960_step_827_entity_23627"
+                }
+              ]
+            },
+            "next_step": "step_843"
+          },
+          {
+            "step": "step_248",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "انتا البوت 😢😭\n\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_827"
+                }
+              ]
+            },
+            "variable": "step_248",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_827"
+                },
+                {
+                  "value": "بوت",
+                  "from_entity": "action_35960_step_827_entity_23627"
+                }
+              ]
+            },
+            "next_step": "step_259"
+          },
+          {
+            "step": "step_259",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "للتواصل مع المطور\ntelegram: @meeesh12 or click [here](https://t.me/meeesh12)\nLinkedIn:  meshal-albishi or click [here ](https://www.linkedin.com/in/meshal-albishi/)\nGitHub: meshalAlbishi or click [here](https://github.com/meshalAlbishi)\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_827"
+                }
+              ]
+            },
+            "variable": "step_259",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_827"
+                },
+                {
+                  "value": "المطور",
+                  "from_entity": "action_35960_step_827_entity_23627"
+                }
+              ]
+            }
+          },
+          {
+            "step": "step_498",
+            "output": {
+              "generic": []
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_19502",
+                "parameters": null,
+                "result_variable": "step_498_result_1"
+              }
+            },
+            "variable": "step_498",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_827"
+                },
+                {
+                  "value": "خدماتي",
+                  "from_entity": "action_35960_step_827_entity_23627"
+                }
+              ]
+            },
+            "next_step": "step_248"
+          },
+          {
+            "step": "step_827",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "شعاع في خدمتك 😎\n اختار من الخدمات التالية عشان اساعدك بشكل افضل 😊"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "المطور",
+                      "value": {
+                        "input": {
+                          "text": "المطور"
+                        }
+                      }
+                    },
+                    {
+                      "label": "خدماتي",
+                      "value": {
+                        "input": {
+                          "text": "خدماتي"
+                        }
+                      }
+                    },
+                    {
+                      "label": "عن الاساليب الذكية",
+                      "value": {
+                        "input": {
+                          "text": "عن الاساليب الذكية"
+                        }
+                      }
+                    },
+                    {
+                      "label": "بوت",
+                      "value": {
+                        "input": {
+                          "text": "بوت"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_35960_step_827_entity_23627",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_827",
+            "next_step": "step_154"
+          },
+          {
+            "step": "step_843",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "مؤسسة تجارية وطنية تأسست عام 2010م متخصصة في المعدات الآلية والروبوت والذكاء الصناعي 🦾\n\n من أهم خدماتهم \n 1- روبوت خدمة العملاء\n2- روبوت تقديم القهوة \n\nللتواصل مع الاساليب الذكية\n\nالموقع: https://www.s-m.com.sa\n\nالايميل: info@s-m.com.sa\n\nالجوال: 0580202718\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_827"
+                }
+              ]
+            },
+            "variable": "step_843",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_827"
+                },
+                {
+                  "value": "عن الاساليب الذكية",
+                  "from_entity": "action_35960_step_827_entity_23627"
+                }
+              ]
+            },
+            "next_step": "step_498"
+          }
+        ],
+        "title": "main",
+        "action": "action_35960",
+        "handlers": [],
+        "condition": {
+          "intent": "action_35960_intent_3835"
+        },
+        "variables": [
+          {
+            "title": "No response",
+            "variable": "step_154"
+          },
+          {
+            "variable": "step_154_result_1"
+          },
+          {
+            "title": "انتا البوت 😢😭 ــــــــــــــــــــــــــــــــــــــــــــــــ",
+            "variable": "step_248"
+          },
+          {
+            "title": "للتواصل مع المطور telegram: @meeesh12 or click [here](https://t.",
+            "variable": "step_259"
+          },
+          {
+            "title": "No response",
+            "variable": "step_498"
+          },
+          {
+            "variable": "step_498_result_1"
+          },
+          {
+            "title": "شعاع في خدمتك 😎 اختار من الخدمات التالية عشان اساعدك بشكل افضل ",
+            "variable": "step_827"
+          },
+          {
+            "title": "مؤسسة تجارية وطنية تأسست عام 2010م متخصصة في المعدات الآلية والر",
+            "variable": "step_843"
+          },
+          {
+            "variable": "step_872_result_1"
+          }
+        ],
+        "next_action": "action_3345",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_872",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "للتواصل مع المطور 👨🏽‍💻\n\ntelegram: @meeesh12 or click [here](https://t.me/meeesh12)\nLinkedIn:  meshal-albishi or click [here ](https://www.linkedin.com/in/meshal-albishi/)\nGitHub: meshalAlbishi or click [here](https://github.com/meshalAlbishi)\n\nـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_35960",
+                "parameters": null,
+                "result_variable": "step_872_result_1"
+              }
+            },
+            "variable": "step_872"
+          }
+        ],
+        "title": "المطور",
+        "action": "action_44797",
+        "handlers": [],
+        "condition": {
+          "intent": "action_44797_intent_6610"
+        },
+        "variables": [
+          {
+            "variable": "step_156_result_1"
+          },
+          {
+            "variable": "step_209_result_1"
+          },
+          {
+            "variable": "step_281_result_1"
+          },
+          {
+            "variable": "step_498_result_1"
+          },
+          {
+            "title": "للتواصل مع المطور 👨🏽‍💻 telegram: @meeesh12 or click [here](ht",
+            "variable": "step_872"
+          },
+          {
+            "variable": "step_872_result_1"
+          }
+        ],
+        "next_action": "action_35960",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": ".أخشى أنني لا أفهم ما تطلبه، يرجى اعادة صياغة سؤالك"
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Retry when no action matches",
+        "action": "anything_else",
+        "handlers": [],
+        "condition": {
+          "expression": "anything_else"
+        },
+        "variables": [
+          {
+            "variable": "step_001"
+          }
+        ],
+        "disambiguation_opt_out": true
+      },
+      {
+        "steps": [
+          {
+            "step": "step_156",
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action",
+              "invoke_action": {
+                "action": "action_35960",
+                "parameters": null,
+                "result_variable": "step_156_result_1"
+              }
+            },
+            "variable": "step_156"
+          }
+        ],
+        "title": "Greet customer",
+        "action": "welcome",
+        "handlers": [],
+        "condition": {
+          "expression": "welcome"
+        },
+        "variables": [
+          {
+            "title": "No response",
+            "variable": "step_156"
+          },
+          {
+            "variable": "step_156_result_1"
+          }
+        ],
+        "next_action": "action_44797",
+        "disambiguation_opt_out": true
+      }
+    ],
+    "intents": [
+      {
+        "intent": "action_19502_intent_39792",
+        "examples": [
+          {
+            "text": "الخدمات"
+          },
+          {
+            "text": "ايش تسوي"
+          },
+          {
+            "text": "خدمات"
+          },
+          {
+            "text": "خدماتي"
+          },
+          {
+            "text": "خدمة"
+          },
+          {
+            "text": "مساعدة"
+          }
+        ]
+      },
+      {
+        "intent": "action_3345_intent_40199",
+        "examples": [
+          {
+            "text": "play"
+          }
+        ]
+      },
+      {
+        "intent": "action_35960_intent_3835",
+        "examples": []
+      },
+      {
+        "intent": "action_44797_intent_6610",
+        "examples": [
+          {
+            "text": "المدير"
+          },
+          {
+            "text": "المسؤول"
+          },
+          {
+            "text": "المطور"
+          },
+          {
+            "text": "مبرمج"
+          },
+          {
+            "text": "مطور"
+          }
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "entity": "action_19502_step_959_entity_8783",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "العودة للقائمة الرئيسية",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "خدمات التعليم",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "خدمات الروبوت",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "طلب خدمة",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_35960_step_827_entity_23627",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "المطور",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "بوت",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "خدماتي",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "عن الاساليب الذكية",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      }
+    ],
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "variables": [],
+    "counterexamples": [],
+    "system_settings": {
+      "disambiguation": {
+        "prompt": ":هل تعني",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "لا شيء مما سبق"
+      }
+    },
+    "learning_opt_out": false
+  },
+  "description": "",
+  "workspace_id": "d356c20f-309f-4792-9dbd-c795fcbae3d5",
+  "dialog_settings": {
+    "actions": true
+  },
+  "snapshot_references": [
+    {
+      "snapshot": "draft"
+    }
+  ],
+  "workspace_reference": {
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "system_settings": {
+      "disambiguation": {
+        "prompt": ":هل تعني",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "لا شيء مما سبق"
+      }
+    },
+    "learning_opt_out": false,
+    "status": "Available"
+  },
+  "assistant_references": [
+    {
+      "name": "شعاع",
+      "assistant_id": "d596b911-8ad0-46ad-bbb4-d62e2dc3f36d",
+      "skill_reference": "actions skill"
+    }
+  ]
+}
